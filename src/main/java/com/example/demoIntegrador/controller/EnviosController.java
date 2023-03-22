@@ -26,7 +26,7 @@ public class EnviosController {
         return ResponseEntity.ok(envio1);
     }
 
-    @GetMapping("/envio")
+    @GetMapping("/envios")
     public List<Envio> filterByStatus(@RequestParam String estado, @RequestParam String cedulaEmpelado){
         return enviosService.filterByStatus(estado);
     }
