@@ -10,11 +10,13 @@ public class Envio {
     private int valorDeclarado;
     private int peso;
 
+    private String estado;
+
     public Envio() {
     }
 
     public Envio(String cedulaCliente, String ciudadOrigen, String ciudadDestino, String direccionDestino,
-                 String nombreRecibe, long celular, int valorDeclarado, int peso) {
+                 String nombreRecibe, long celular, int valorDeclarado, int peso, String estado) {
         this.cedulaCliente = cedulaCliente;
         this.ciudadOrigen = ciudadOrigen;
         this.ciudadDestino = ciudadDestino;
@@ -23,6 +25,7 @@ public class Envio {
         this.celular = celular;
         this.valorDeclarado = valorDeclarado;
         this.peso = peso;
+        this.estado = estado;
     }
 
     public String getCedulaCliente() {
@@ -56,4 +59,6 @@ public class Envio {
     public int getPeso() {
         return peso;
     }
+
+    public String getEstado(){ return estado;}
 }

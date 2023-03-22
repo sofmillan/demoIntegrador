@@ -1,10 +1,12 @@
 package com.example.demoIntegrador.service;
 
-import com.example.demoIntegrador.model.Cliente;
+
 import com.example.demoIntegrador.model.Envio;
 import org.springframework.stereotype.Service;
 
+
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class EnviosService {
@@ -12,5 +14,9 @@ public class EnviosService {
     public Envio createEnvio(Envio envio){
         envios.add(envio);
         return envio;
+    }
+
+    public List<Envio> filterByStatus( String estado){
+        return envios.stream().filter(envio-> envio.getEstado().equals(estado)).collect(Collectors.toList());
     }
 }
